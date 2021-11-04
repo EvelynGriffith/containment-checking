@@ -22,11 +22,11 @@ console = Console()
 
 class ContainmentCheckApproach(str, Enum):
     """Define the name for the approach for performing containment checking of structured types."""
+
     # define the three different approaches for containment checking
     list = "list"
     set = "set"
     tuple = "tuple"
-
 
 
 def human_readable_boolean(answer: bool) -> str:
@@ -56,7 +56,7 @@ def generate_random_number(maximum: int, exceed: bool = False) -> int:
         return random.randint(1, maximum + 1)
     # return the randomly generated number of the value
     # that exceeds the specified maximum value
-    else: 
+    else:
         return random_value
 
 
@@ -91,7 +91,7 @@ def containment_check_list(thelist: List[int], number: int) -> bool:
     # the value is, in fact, inside of the list
     # so this function should return True
     if number in thelist:
-            found = True
+        found = True
     return found
     # return bool to indicate whether or not value is found
     # NOTE: Make sure that you use the "in" operator for this function
@@ -102,34 +102,34 @@ def containment_check_tuple(thetuple: Tuple[int], number: int) -> bool:
     # so this function should return True
     found = False
     # return bool to indicate whether or not value is found
-    # NOTE: Make sure that you use the "in" operator for this function
+    # Make sure that you use the "in" operator for this function
     # assume that the value is not inside of the tuple
     # the value is, in fact, inside of the tuple
     # so this function should return True
     if number in thetuple:
-            found = True
+        found = True
     return found
 
 
 def containment_check_set(thelist: List[int], number: int) -> bool:
     """Determine if a value is contained in the list."""
-    # NOTE: Conventional wisdom often suggests it is faster to:
+    # Conventional wisdom often suggests it is faster to:
     # - Convert a list to a set
     # - Search for a number in the set
     # ... than it is to search through a list
     # Reference to support this assertion:
     # https://docs.quantifiedcode.com/python-anti-patterns/performance/using_key_in_list_to_check_if_key_is_contained_in_a_list.html
-    # TODO: assume that the value is not inside of the tuple
+    # assume that the value is not inside of the tuple
     found = False
     # convert the list to a set
     theset = set(thelist)
     # the value is, in fact, inside of the set
     # so this function should return True
     if number in theset:
-            found = True
+        found = True
     return found
     # return bool to indicate whether or not value is found
-    # NOTE: Make sure that you use the "in" operator for this function
+    # Make sure that you use the "in" operator for this function
 
 
 def calculate_average_values(data_list: List[float], data_count: int) -> List[float]:
@@ -146,10 +146,10 @@ def perform_containment_check_benchmark(
 ) -> None:
     """Run an experiment using the timeit package for the specific function."""
     # set the number of runs inside of a benchmark
-    # NOTE: you may consider making this a parameter to the tool
+    # you may consider making this a parameter to the tool
     number_runs = 10
     # set the number of repeats for running an entire benchmark
-    # NOTE: you may consider making this a parameter to the tool
+    # you may consider making this a parameter to the tool
     number_repeats = 3
     # use the timeit module to evaluate performance with the current configuration
     # reference to learn about the timeit module:
