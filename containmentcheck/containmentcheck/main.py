@@ -23,9 +23,9 @@ console = Console()
 class ContainmentCheckApproach(str, Enum):
     """Define the name for the approach for performing containment checking of structured types."""
     # define the three different approaches for containment checking
-    listcheck = "listcheck"
-    setcheck = "setcheck"
-    tuplecheck = "tuplecheck"
+    list = "list"
+    set = "set"
+    tuple = "tuple"
 
 
 
