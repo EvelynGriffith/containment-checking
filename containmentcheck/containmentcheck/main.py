@@ -86,20 +86,29 @@ def generate_random_container(
 
 def containment_check_list(thelist: List[int], number: int) -> bool:
     """Determine if a value is contained in the list."""
-    # TODO: assume that the value is not inside of the list
-    # TODO: the value is, in fact, inside of the list
+    # assume that the value is not inside of the list
+    found = False
+    # the value is, in fact, inside of the list
     # so this function should return True
-    # TODO: return bool to indicate whether or not value is found
+    if number in thelist:
+            found = True
+    return found
+    # return bool to indicate whether or not value is found
     # NOTE: Make sure that you use the "in" operator for this function
 
 
 def containment_check_tuple(thetuple: Tuple[int], number: int) -> bool:
     """Determine if a value is contained in the tuple."""
-    # TODO: assume that the value is not inside of the tuple
-    # TODO: the value is, in fact, inside of the tuple
     # so this function should return True
-    # TODO: return bool to indicate whether or not value is found
+    found = False
+    # return bool to indicate whether or not value is found
     # NOTE: Make sure that you use the "in" operator for this function
+    # assume that the value is not inside of the tuple
+    # the value is, in fact, inside of the tuple
+    # so this function should return True
+    if number in thetuple:
+            found = True
+    return found
 
 
 def containment_check_set(thelist: List[int], number: int) -> bool:
@@ -112,10 +121,14 @@ def containment_check_set(thelist: List[int], number: int) -> bool:
     # https://docs.quantifiedcode.com/python-anti-patterns/performance/using_key_in_list_to_check_if_key_is_contained_in_a_list.html
     # TODO: assume that the value is not inside of the tuple
     found = False
-    # TODO: convert the list to a set
-    # TODO: the value is, in fact, inside of the set
+    # convert the list to a set
+    theset = set(thelist)
+    # the value is, in fact, inside of the set
     # so this function should return True
-    # TODO: return bool to indicate whether or not value is found
+    if number in theset:
+            found = True
+    return found
+    # return bool to indicate whether or not value is found
     # NOTE: Make sure that you use the "in" operator for this function
 
 
