@@ -71,7 +71,9 @@ def generate_random_container(
     # convert the list to a tuple
     # only when the make_tuple boolean variable is True
     # return the randomly generated container of values
-    randomlist: List[any, ] = []
+    randomlist: List[
+        any,
+    ] = []
     while len(randomlist) < size:
         n = random.randint(0, maximum)
         randomlist.append(n)
