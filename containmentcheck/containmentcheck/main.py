@@ -22,24 +22,42 @@ console = Console()
 
 class ContainmentCheckApproach(str, Enum):
     """Define the name for the approach for performing containment checking of structured types."""
-    # TODO: define the three different approaches for containment checking
+    # define the three different approaches for containment checking
+    listcheck = "listcheck"
+    setcheck = "setcheck"
+    tuplecheck = "tuplecheck"
+
 
 
 def human_readable_boolean(answer: bool) -> str:
     """Produce a human-readable Yes or No for a boolean value of True or False."""
-    # TODO: return "Yes" when the provided answer is True
-    # TODO: return "No" when the provided answer is False
+    # produce a human-readable value for a bool
+    # True --> "Yes"
+    # False --> "No"
+    # originally had if answer != True:
+    # Flake8 Linting Tool said it needed to be is not instead of !=
+    # therefore it needed changed to have a passing build
+    """ note that the build failed if we used != True instead of is not True """
+    if answer is not True:
+        return "No"
+    else:
+        return "Yes"
 
 
 def generate_random_number(maximum: int, exceed: bool = False) -> int:
     """Generate a random list defined by the size."""
-    # TODO: start with a random value that is one greater
+    # start with a random value that is one greater
     # than the maximum, which is helpful when benchmarking
     # a containment algorithm for a value not in the container
-    # TODO: generate a random value in consideration of a maximum
+    random_value = maximum + 1
+    # generate a random value in consideration of a maximum
     # only take this step when the exceed variable is False
-    # TODO: return the randomly generated number of the value
+    if exceed is not True:
+        return random.randint(1, maximum + 1)
+    # return the randomly generated number of the value
     # that exceeds the specified maximum value
+    else: 
+        return random_value
 
 
 def generate_random_container(
@@ -48,11 +66,22 @@ def generate_random_container(
     make_tuple: bool = False,
 ) -> Union[List[int], Tuple[int, ...]]:
     """Generate a random list defined by the size."""
-    # TODO: generate a list of random values for a specific size
+    # generate a list of random values for a specific size
     # and with a number up to a specific maximum
-    # TODO: convert the list to a tuple
+    # convert the list to a tuple
     # only when the make_tuple boolean variable is True
-    # TODO: return the randomly generated container of values
+    # return the randomly generated container of values
+    randomlist: List[
+        Any,
+    ] = []
+    while len(randomlist) < size:
+        n = random.randint(0, maximum)
+        randomlist.append(n)
+    # if the make_tuple parameter is True, then return a tuple instead of a list
+    if make_tuple is True:
+        return tuple(randomlist)
+    else:
+        return randomlist
 
 
 def containment_check_list(thelist: List[int], number: int) -> bool:
