@@ -3,6 +3,7 @@
 from typing import List
 from typing import Tuple
 from typing import Union
+from typing import Any
 
 from enum import Enum
 
@@ -10,6 +11,7 @@ import random
 import timeit
 
 import typer
+
 
 from rich.console import Console
 
@@ -73,7 +75,7 @@ def generate_random_container(
     # only when the make_tuple boolean variable is True
     # return the randomly generated container of values
     randomlist: List[
-        any,
+        Any,
     ] = []
     while len(randomlist) < size:
         n = random.randint(0, maximum)
