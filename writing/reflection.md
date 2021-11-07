@@ -46,11 +46,11 @@ output examples to demonstrate that your program generates correct data!
 
 ## Research Questions
 
-TODO: Clearly state at least three research questions that you want to ask and
-answer by using the `containmentcheck` program. You should provide the research
-questions in a list that starts with "RQ" and ends with a question mark. Please
-see the engineering effort about the intersection algorithms for examples of
-research questions that the course instructor created for that project.
+- RQ 1: How does the size of the container effect the run time of the program when the number being searched for doesn't exceed the maximum value (also consider this when talking about running for a list, set, and tuple)?
+
+- RQ 2: How does the size of the container effect the run time of the program when the number being searched for exceeds the maximum value(also consider this when talking about running for a list, set, and tuple)?
+
+- RQ 3: Which data container is the fastes when searching for a value that exceeds the maximum value in any container size?
 
 ## Data Tables
 

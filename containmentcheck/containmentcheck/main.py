@@ -49,15 +49,17 @@ def generate_random_number(maximum: int, exceed: bool = False) -> int:
     # start with a random value that is one greater
     # than the maximum, which is helpful when benchmarking
     # a containment algorithm for a value not in the container
-    random_value = maximum + 1
+    random_value = maximum - 1
     # generate a random value in consideration of a maximum
     # only take this step when the exceed variable is False
-    if exceed is not True:
-        return random.randint(1, maximum + 1)
+    if exceed is True:
+        random_number = random.randint(maximum + 1, maximum + 100)
+        return random_number
     # return the randomly generated number of the value
     # that exceeds the specified maximum value
     else:
         return random_value
+
 
 
 def generate_random_container(
@@ -196,6 +198,7 @@ def containmentcheck(
     console.print(
         f"\t Should the value to search for exceed the maximum number? {human_readable_boolean(exceed)}"
     )
+    console.print(f"\t The random number that was generated is: {generate_random_number(random_number)}")
     console.print()
     # conduct a doubling experiment for containment checking with the list data structure
     if approach.value == ContainmentCheckApproach.list:
