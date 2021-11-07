@@ -60,15 +60,14 @@ should provide enough data tables and output values to ensure that you can
 answer all of your research questions and use the empirical results to classify
 the likely worst-case time complexity of each of the algorithms.
 
-| Exceed |  Size   | Maximum    | List Avg Time   | Tuple Avg Time  | Set Avg Time  |
-| :----: | :-----: | :---------:|
-|  Yes   | 5,000   | 50,000,000 |
-|  No    | 5,000   | 50,000,000 |
-|  Yes   | 10,000  | 50,000,000 |
-|  No    | 10,000  | 50,000,000 |
-|  Yes   | 20,000  | 50,000,000 |
-|  No    | 20,000  | 50,000,000 |
-
+| Exceed |  Size   |  Maximum    |  List Avg Time   |  Tuple Avg Time   |  Set Avg Time   |
+| :----: | :-----: | :---------: | :--------------: | :---------------: | :-------------: |
+|  Yes   | 5,000   | 50,000,000  |    0.0000718     |    0.0000537      |    0.0003426    |
+|  No    | 5,000   | 50,000,000  |                  |                   |                 |
+|  Yes   | 10,000  | 50,000,000  |    0.0001607     |    0.0001375      |    0.0005095    |
+|  No    | 10,000  | 50,000,000  |                  |                   |                 |
+|  Yes   | 20,000  | 50,000,000  |    0.0003311     |    0.0003213      |    0.0016860    |
+|  No    | 20,000  | 50,000,000  |                  |                   |                 |
 ## Performance Analysis
 
 ### Empirical Evaluation
