@@ -10,23 +10,88 @@ TODO: Document and justify your choice for all of the experiment parameters
 
 #### One output from running the `containmentcheck` program
 
-TODO: Provide a fenced code block with one output from running the program
+```poetry run containmentcheck --size 5000 --maximum 50000000 --approach list --exceed```
+
+```
+✨ Conducting an experiment to measure the performance of containment checking!
+         Type of the data container: list
+         Size of the data container: 5000
+         Maximum value for a number in the data container: 50000000
+         Should the value to search for exceed the maximum number? Yes
+         The random number that was generated is: 50000082
+
+⏱  Total time for running 10 runs in 3 benchmark campaigns: [0.0010742999999999725, 0.0015923999999999938, 0.0011578999999999895]
+
+🧮 Average time for running one of  10 runs in 3 benchmark campaigns: [0.00010742999999999726, 0.00015923999999999938, 0.00011578999999999894]
+```
 
 #### One output from running the `containmentcheck` program
 
-TODO: Provide a fenced code block with one output from running the program
+```poetry run containmentcheck --size 10000 --maximum 50000000 --approach list --exceed```
+
+```
+✨ Conducting an experiment to measure the performance of containment checking!
+         Type of the data container: list
+         Size of the data container: 10000
+         Maximum value for a number in the data container: 50000000
+         Should the value to search for exceed the maximum number? Yes
+         The random number that was generated is: 50000046
+
+⏱  Total time for running 10 runs in 3 benchmark campaigns: [0.00192869999999995, 0.001796999999999993, 0.0017988999999999922]
+
+🧮 Average time for running one of  10 runs in 3 benchmark campaigns: [0.000192869999999995, 0.0001796999999999993, 0.00017988999999999923]
+```
 
 #### One output from running the `containmentcheck` program
 
-TODO: Provide a fenced code block with one output from running the program
+```poetry run containmentcheck --size 20000 --maximum 50000000 --approach list --exceed```
+
+```
+✨ Conducting an experiment to measure the performance of containment checking!
+         Type of the data container: list
+         Size of the data container: 20000
+         Maximum value for a number in the data container: 50000000
+         Should the value to search for exceed the maximum number? Yes
+         The random number that was generated is: 50000035
+
+⏱  Total time for running 10 runs in 3 benchmark campaigns: [0.004365799999999975, 0.004335499999999992, 0.004289199999999993]
+
+🧮 Average time for running one of  10 runs in 3 benchmark campaigns: [0.0004365799999999975, 0.00043354999999999924, 0.0004289199999999993]
+```
 
 #### One output from running the `containmentcheck` program
 
-TODO: Provide a fenced code block with one output from running the program
+```poetry run containmentcheck --size 5000 --maximum 50000000 --approach tuple --exceed```
+
+```
+✨ Conducting an experiment to measure the performance of containment checking!
+         Type of the data container: tuple
+         Size of the data container: 5000
+         Maximum value for a number in the data container: 50000000
+         Should the value to search for exceed the maximum number? Yes
+         The random number that was generated is: 50000034
+
+⏱  Total time for running 10 runs in 3 benchmark campaigns: [0.0006615999999999844, 0.0006546000000000052, 0.00065670000000001]
+
+🧮 Average time for running one of  10 runs in 3 benchmark campaigns: [6.615999999999844e-05, 6.546000000000052e-05, 6.5670000000001e-05]
+```
 
 #### One output from running the `containmentcheck` program
 
-TODO: Provide a fenced code block with one output from running the program
+```poetry run containmentcheck --size 10000 --maximum 50000000 --approach tuple --exceed```
+
+```
+✨ Conducting an experiment to measure the performance of containment checking!
+         Type of the data container: tuple
+         Size of the data container: 10000
+         Maximum value for a number in the data container: 50000000
+         Should the value to search for exceed the maximum number? Yes
+         The random number that was generated is: 50000086
+
+⏱  Total time for running 10 runs in 3 benchmark campaigns: [0.00152979999999997, 0.0015025000000000177, 0.0015259999999999718]
+
+🧮 Average time for running one of  10 runs in 3 benchmark campaigns: [0.000152979999999997, 0.00015025000000000178, 0.00015259999999999718]
+```
 
 ## Experiment Design
 
@@ -97,9 +162,6 @@ no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 ### Describe in detail how the provided source code works
 
-TODO: Use a fenced code block to provide the requested source code
-TODO: Write at least one paragraph to explain the request source code
-
 ```python
 number_runs = 10
 number_repeats = 3
@@ -107,30 +169,19 @@ execution_times = timeit.Timer(containment_check_lambda).repeat(
     repeat=number_repeats, number=number_runs
 ```
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+This source code is telling the computer that it needs to run the program 10 times for each repeat and then repeat through that another three times. This is shown in lines one and two of the example. The code is also telling the computer that it needs to time each run using the timeit.Timer part of the code which is a python import. This import allows the data to be collected while the program is running and will eventually be displayable through the cli function in the main.py file. The execution_times variable is very useful because it also allows the timer to collect data based on the repeates and then display the average times so that we dont have 30 different times printed at the output.
 
 ## Professional Development
 
 ### What is challenging about designing an experiment to evaluate an algorithm's performance?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+I think the most challenging thing about designing an experiment is that you have to think about the output that you have to understand what you are trying to accomplish (along with the code you wrote) so well that you can develop a question to answer that is attainable for the code you wrote, as well as is something that the code doesnt already tell you. My biggest struggle with developing/designing my experiment was that I didnt, at first, have enough foundational knowledge of what each peice of code was doing and how the experiment should function to give me an answer to the questions I was trying to develop. At first I didnt quite understand what it meant for the program value to "exceed" or "not exceed" the maximum and that made it especially tricky to try and develop a question revolving around that.
 
 ### Why is it necessary to perform both an analytical and an empirical evaluation of an algorithm?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+I think it is necessary to do this because you can't always rely on the code to tell you everything you need to know through just the output. I think knowing how to deduce things from the code you have written is exceedingly important and being able to draw conclusions without seeing an output can be very helpful becuase it can not only give you more backing for your answers but it can also tell you when your output for the code may have gone awry.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Similarly I think that running empirical evaluations of code can be just as important because getting an ouput can also be one of the best ways to run an experiment and get the data you need to answer important/difficult questions.
 
 ### How do the empirical results suggest that you don't yet know the entire story about the performance of containment checking?
 
