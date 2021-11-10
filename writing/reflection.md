@@ -6,7 +6,7 @@
 
 ### Report at least five examples of program output to demonstrate that your `containmentcheck` program works correctly
 
-TODO: Document and justify your choice for all of the experiment parameters
+The choices I made for my experiment parameters are detailed in the empirical experiment section.
 
 #### One output from running the `containmentcheck` program
 
@@ -99,11 +99,11 @@ The experiment design that I chose to go with is focusing mainly on the data con
 
 ## Research Questions
 
-- RQ 1: How does the size of the container effect the run time of the program when the number being searched for doesn't exceed the maximum value (also consider this when talking about running for a list, set, and tuple)?
+- RQ 1: How does the size of the container effect the run time of the program when the number being searched for doesn't exceed the maximum value? Look at a small container size of 5,000, a medium container size of 10,000, and a large container size of 20,000. Compare this by running with a list, set, and tuple.
 
-- RQ 2: How does the size of the container effect the run time of the program when the number being searched for exceeds the maximum value(also consider this when talking about running for a list, set, and tuple)?
+- RQ 2: How does the size of the container effect the run time of the program when the number being searched for exceeds the maximum value(also consider this when talking about running for a list, set, and tuple)? Look at a small container size of 5,000, a medium container size of 10,000, and a large container size of 20,000.
 
-- RQ 3: Which data container is the fastes when searching for a value that exceeds the maximum value in any container size?
+- RQ 3: How does the size of the maximum value effect the run time of the program when the number being searched for exceeds the maximum value? Look at a small maximum value of 1,000,000 and a large maximum value of 100,000,000. Compare this by running with a list, set, and tuple.
 
 ## Data Tables
 
@@ -115,6 +115,8 @@ The experiment design that I chose to go with is focusing mainly on the data con
 |  No    | 10,000  | 50,000,000  |                  |                   |                 |
 |  Yes   | 20,000  | 50,000,000  |    0.0003311     |    0.0003213      |    0.0016860    |
 |  No    | 20,000  | 50,000,000  |                  |                   |                 |
+|  Yes   | 10,000  | 1,000,000   |                  |                   |                 |
+|  Yes   | 10,000  | 100,000,000 |                  |                   |                 | 
 
 ## Performance Analysis
 

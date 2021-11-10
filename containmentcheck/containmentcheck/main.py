@@ -45,22 +45,24 @@ def human_readable_boolean(answer: bool) -> str:
     else:
         return "Yes"
 
-
-def generate_random_number(maximum: int, exceed: bool = False) -> int:
+def generate_random_number(maximum: int, exceed: bool = True) -> int:
     """Generate a random list defined by the size."""
     # start with a random value that is one greater
     # than the maximum, which is helpful when benchmarking
     # a containment algorithm for a value not in the container
-    random_value = maximum - 1
+    random_number = (maximum + 1)
     # generate a random value in consideration of a maximum
     # only take this step when the exceed variable is False
-    if exceed is True:
-        random_number = random.randint(maximum + 1, maximum + 100)
-        return random_number
+    # if exceed is not True:
+        # random_number = random.randint(1, maximum + 1)
+        # return random_number
     # return the randomly generated number of the value
     # that exceeds the specified maximum value
+    if exceed:
+        return random_number
     else:
-        return random_value
+        random_number = random.randint(1, maximum + 1)
+        return random_number
 
 
 def generate_random_container(
