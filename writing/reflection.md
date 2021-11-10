@@ -122,14 +122,14 @@ The experiment design that I chose to go with is focusing mainly on the data con
 
 ### Empirical Evaluation
 
-TODO: Provide at least three paragraphs that explain which containment checking
+Provide at least three paragraphs that explain which containment checking
 algorithm is fastest, by how much it is faster, and how you knew that it was
 faster, referencing the data in the aforementioned command outputs and the data
 tables to support your response. You should make sure that you answer each of
 the at least three research questions that you posed in a previous section.
 
-TODO: Make sure that your responses explain WHY certain configurations are faster!
-TODO: It is not sufficient to ONLY explain WHICH configuration is faster!
+Make sure that your responses explain WHY certain configurations are faster!
+It is not sufficient to ONLY explain WHICH configuration is faster!
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
@@ -148,7 +148,7 @@ no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 ### Analytical Evaluation
 
-TODO: Using the provided source code for the different containment check
+Using the provided source code for the different containment check
 algorithms, your textbook, your experimental results, and any relevant online
 resources that you cite in this reflection, define the worst-case time
 complexity, using the big-O notation, for the three containment check
@@ -187,7 +187,7 @@ Similarly I think that running empirical evaluations of code can be just as impo
 
 ### How do the empirical results suggest that you don't yet know the entire story about the performance of containment checking?
 
-TODO: Provide a one-paragraph response that answers this question in your own words.
+Provide a one-paragraph response that answers this question in your own words.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
