@@ -6,8 +6,6 @@
 
 ### Report at least five examples of program output to demonstrate that your `containmentcheck` program works correctly
 
-The choices I made for my experiment parameters are detailed in the empirical experiment section along with why I chose to display these specific outputs.
-
 #### One output from running the `containmentcheck` program
 
 ```poetry run containmentcheck --size 5000 --maximum 50000000 --approach list --exceed```
@@ -137,24 +135,17 @@ Evelyn's Data:
 
 ### Empirical Evaluation
 
-Provide at least three paragraphs that explain which containment checking
-algorithm is fastest, by how much it is faster, and how you knew that it was
-faster, referencing the data in the aforementioned command outputs and the data
-tables to support your response. You should make sure that you answer each of
-the at least three research questions that you posed in a previous section.
-
-Make sure that your responses explain WHY certain configurations are faster!
-It is not sufficient to ONLY explain WHICH configuration is faster!
-
-Through my experiment, I have been able to deduce that the Tuple data container is the fastest when it comes to running this code.
+Through my experiment, I have been able to deduce that the Tuple data container is the fastest, overall, when it comes to running this code.
 
 - RQ 1: How does the size of the container effect the run time of the program when the number being searched for doesn't exceed the maximum value? Look at a small container size of 5,000, a medium container size of 10,000, and a large container size of 20,000. Compare this by running with a list, set, and tuple.
 
-To begin, I would like to look at RQ 1. In order to fully understand this data, I would ask that you look at the rows 2, 4, and 6 of the table called "Evelyn's Data" unless asked to look at "Morgan's data". When trying to answer this experimental question, I specifically ran this command: `poetry run containmentcheck --size 5000 --maximum 50000000 --approach list`. However, in order to collect the data for this experiment, I decided the change the "--size". In order to collect the needed data, I changed the command so that the container was 
+To begin, I would like to look at RQ 1. In order to fully understand this data, I would ask that you look at the rows 2, 4, and 6 of the table called "Evelyn's Data" unless asked to look at "Morgan's data". When trying to answer this experimental question, I specifically ran this command: `poetry run containmentcheck --size 5000 --maximum 50000000 --approach list`. However, in order to collect the data for this experiment, I decided the change the "--size". In order to collect the needed data, I changed the command so that the container was 5000, 10000, and 20000. This allowed me to see whether the average time it took for the computer to iterate through the container was changed by the size of the container when not using the exceed function. Overall, I think it is rather hard to say whether or not the size of the container changed this part of the data collection process. When the computer is searching for a specific number that may or may not be in the container, there is no way of knowing where in the list the number would pop up. This means that we can never really say whether or not the program ran faster in a certain container because we dont know if the program just happened to stumbled upon the number early in the container or not. However, when pertaining to this question, I found that the fastest data container type in general was the tuple. The set data container was absolutely the slowest data container type overall and this makes sense because the Set has to change the list into a Set and then iterate through everything, whereas the other two do not have to do that. However, the Tuple was faster than the list. 
 
 - RQ 2: How does the size of the container effect the run time of the program when the number being searched for exceeds the maximum value(also consider this when talking about running for a list, set, and tuple)? Look at a small container size of 5,000, a medium container size of 10,000, and a large container size of 20,000.
 
-- RQ 3: How does the size of the maximum value effect the run time of the program when the number being searched for exceeds the maximum value? Look at a small maximum value of 1,000,000 and a large maximum value of 100,000,000. Compare this by running with a list, set, and tuple.
+The size of the container matters a whole lot more in this question because of the fact that we are using the "--exceed" part of the command. The --exceed part of the run command is very important because it allows us to run through the entire container when searching for a number in the container. For example, if the data container maximum was set to 5, then all numbers in the container would be below the number 5. If i told the code to search for the number 7, then inevitably the program would be forced to run through the entire container because 7 does not exist within the container. This means that if the container can only hold 100 numbers the program will inevitably be faster than if the container can contain 50,000,000 numbers. The --exceed ensures that the progam will run through the entire container so it is also very useful because the issue that was discussed in the previous code can actually be negated. If I ensure that the program will inevitably run through 100 slots, then I know that all of my data will have less variables determining why it is different and I can ensure that my data is the most similar that it can get apart from the data that I am trying to collect. When looking at this question, the Tuple data container is still the fastest, list is the second fastest, and Set is the slowest.
+
+- RQ 3: How does the size of the maximum value effect the run time of the program when the number being searched for exceeds the maximum value? Look at a small maximum value of 1,000,000 and a large maximum value of 100,000,000. Compare this by running with a list, set, and tupl
 
 ### Analytical Evaluation
 
