@@ -146,34 +146,25 @@ the at least three research questions that you posed in a previous section.
 Make sure that your responses explain WHY certain configurations are faster!
 It is not sufficient to ONLY explain WHICH configuration is faster!
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Through my experiment, I have been able to deduce that the Tuple data container is the fastest when it comes to running this code.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+- RQ 1: How does the size of the container effect the run time of the program when the number being searched for doesn't exceed the maximum value? Look at a small container size of 5,000, a medium container size of 10,000, and a large container size of 20,000. Compare this by running with a list, set, and tuple.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+To begin, I would like to look at RQ 1. In order to fully understand this data, I would ask that you look at the rows 2, 4, and 6 of the table called "Evelyn's Data" unless asked to look at "Morgan's data". When trying to answer this experimental question, I specifically ran this command: `poetry run containmentcheck --size 5000 --maximum 50000000 --approach list`. However, in order to collect the data for this experiment, I decided the change the "--size". In order to collect the needed data, I changed the command so that the container was 
+
+- RQ 2: How does the size of the container effect the run time of the program when the number being searched for exceeds the maximum value(also consider this when talking about running for a list, set, and tuple)? Look at a small container size of 5,000, a medium container size of 10,000, and a large container size of 20,000.
+
+- RQ 3: How does the size of the maximum value effect the run time of the program when the number being searched for exceeds the maximum value? Look at a small maximum value of 1,000,000 and a large maximum value of 100,000,000. Compare this by running with a list, set, and tuple.
 
 ### Analytical Evaluation
 
-Using the provided source code for the different containment check
-algorithms, your textbook, your experimental results, and any relevant online
-resources that you cite in this reflection, define the worst-case time
-complexity, using the big-O notation, for the three containment check
-algorithms called `containment_check_tuple`, `containment_check_list`, and
-`containment_check_set`. You should justify why you picked that complexity.
+In order to do our analytical evaluation, I decided to do the necessary doubling experiment using the data from the previous table. I took the data when the container is sized at 5,000 and 10,000 and used the average time to determine the doubling ratio for each data container type when the generated number does exceed the maximum. This is how I determined the worst cases for each type of data contaner.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+The doubling ratio for the list data container when the container sizes are 5,000 and 10,000 and we do not use exceed is 0.0004271 / 0.0002655 = 1.6086629 which is about 2. Therefore, O(n) = 2.
+
+The doubling ratio for the tuple data container when the container sizes are 5,000 and 10,000 and we do not use exceed is 0.0003941 / 0.0002007 = 1.9636274 which is about 2. Therefore, O(n) = 2.
+
+The doubling ratio for the set data container when the container sizes are 5,000 and 10,000 and we do not use exceed is 0.0016538 / 0.0011667 = 1.417502357 which is about 1. Therefore, O(n) = 1.
 
 ## Source Code
 
@@ -202,9 +193,3 @@ Similarly I think that running empirical evaluations of code can be just as impo
 
 ### How do the empirical results suggest that you don't yet know the entire story about the performance of containment checking?
 
-Provide a one-paragraph response that answers this question in your own words.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
