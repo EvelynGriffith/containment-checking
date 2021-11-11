@@ -107,6 +107,8 @@ The experiment design that I chose to go with is focusing mainly on the data con
 
 ## Data Tables
 
+Morgan's Data:
+
 | Exceed |  Size   |  Maximum    |  List Avg Time   |  Tuple Avg Time   |  Set Avg Time   |
 | :----: | :-----: |:----------: | :--------------: | :---------------: | :-------------: |
 |  Yes   | 5,000   | 50,000,000  |    0.0000718     |    0.0000537      |    0.0003426    |
@@ -116,7 +118,9 @@ The experiment design that I chose to go with is focusing mainly on the data con
 |  Yes   | 20,000  | 50,000,000  |    0.0003311     |    0.0003213      |    0.0016860    |
 |  No    | 20,000  | 50,000,000  |    0.0002190     |    0.0002293      |    0.0012891    |
 |  Yes   | 10,000  |  1,000,000  |    0.0001101     |    0.0001104      |    0.0005593    |
-|  Yes   | 10,000  |100,000,000  |    0.0001250     |    0.0001362      |    0.0004421    |
+|  Yes   | 10,000  | 100,000,000 |    0.0001250     |    0.0001362      |    0.0004421    |
+
+Evelyn's Data:
 
 | Exceed |  Size   |  Maximum    |  List Avg Time   |  Tuple Avg Time   |  Set Avg Time   |
 | :----: | :-----: |:----------: | :--------------: | :---------------: | :-------------: |
@@ -127,7 +131,7 @@ The experiment design that I chose to go with is focusing mainly on the data con
 |  Yes   | 20,000  | 50,000,000  |    0.0006999     |    0.0007613      |    0.0045198    |
 |  No    | 20,000  | 50,000,000  |    0.0008031     |    0.0006611      |    0.0049666    |
 |  Yes   | 10,000  |  1,000,000  |    0.0002475     |    0.0004405      |    0.0016763    |
-|  Yes   | 10,000  |100,000,000  |    0.0002419     |    0.0003157      |    0.0016750    |
+|  Yes   | 10,000  | 100,000,000 |    0.0002419     |    0.0003157      |    0.0016750    |
 
 ## Performance Analysis
 
